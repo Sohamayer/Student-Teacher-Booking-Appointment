@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teacher Dashboard | Smart School Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="logo" />
+      <h2>Smart School Portal</h2>
+    </div>
+    <button id="logoutBtn" class="btn logout-btn">Logout</button>
+  </header>
+
+  <main class="main-content">
+    <!-- Teacher Info -->
+    <section class="dashboard-section">
+      <h1>👋 Welcome, <span id="teacherName">Teacher</span>!</h1>
+      <p>Email: <span id="teacherEmail"></span></p>
+      <p>Department: <span id="teacherDept"></span></p>
+    </section>
+
+    <!-- Appointments -->
+    <section class="appointments-section">
+      <h2>📋 Student Appointments</h2>
+      <div id="appointmentList">
+        <p>Loading appointments...</p>
+      </div>
+    </section>
+
+    <!-- Messages -->
+    <section class="messages-section">
+      <h2>💬 Messages from Students</h2>
+      <div id="messageList">
+        <p>Loading messages...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Smart School Portal. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

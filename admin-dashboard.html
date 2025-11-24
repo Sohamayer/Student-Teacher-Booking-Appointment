@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | Smart School Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="logo" />
+      <h2>Smart School Portal</h2>
+    </div>
+    <button id="logoutBtn" class="btn logout-btn">Logout</button>
+  </header>
+
+  <!-- Main -->
+  <main class="main-content admin-main">
+    <h1>🛠️ Admin Dashboard</h1>
+    <p class="muted">Manage teachers, students, and appointments.</p>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="tabTeachers">Teachers</button>
+      <button class="tab-btn" data-tab="tabStudents">Students</button>
+      <button class="tab-btn" data-tab="tabAppointments">Appointments</button>
+      <button class="tab-btn" data-tab="tabMessages">Messages</button>
+      <button class="tab-btn" data-tab="tabLogs">Logs</button>
+    </div>
+
+    <!-- Teachers Section -->
+    <section id="tabTeachers" class="tab-panel active">
+      <div class="grid-2">
+        <form id="addTeacherForm" class="card form-grid">
+          <h3>Add Teacher</h3>
+          <div class="input-group">
+            <label for="tName">Name</label>
+            <input id="tName" placeholder="e.g. Ananya Sharma" required />
+          </div>
+          <div class="input-group">
+            <label for="tEmail">Email</label>
+            <input id="tEmail" type="email" placeholder="e.g. ananya@school.com" required />
+          </div>
+          <div class="input-group">
+            <label for="tDept">Department</label>
+            <input id="tDept" placeholder="e.g. Physics" required />
+          </div>
+          <div class="input-group">
+            <label for="tSubject">Subject</label>
+            <input id="tSubject" placeholder="e.g. Quantum Mechanics" required />
+          </div>
+          <button class="btn add-btn" type="submit">➕ Add Teacher</button>
+          <p id="addTeacherMsg" class="form-message"></p>
+        </form>
+
+        <div class="card">
+          <div class="card-head">
+            <h3>All Teachers</h3>
+            <button id="refreshTeachers" class="btn ghost small">Refresh</button>
+          </div>
+          <div id="teachersList" class="table-list"><p>Loading...</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Students Section -->
+    <section id="tabStudents" class="tab-panel">
+      <div class="card">
+        <div class="card-head">
+          <h3>All Students</h3>
+          <button id="refreshStudents" class="btn ghost small">Refresh</button>
+        </div>
+        <div id="allStudentsList" class="table-list"><p>Loading...</p></div>
+      </div>
+    </section>
+
+    <!-- Appointments Section -->
+    <section id="tabAppointments" class="tab-panel">
+      <div class="card">
+        <div class="card-head">
+          <h3>All Appointments</h3>
+          <button id="refreshAppointments" class="btn ghost small">Refresh</button>
+        </div>
+        <div id="allAppointmentsList" class="table-list"><p>Loading...</p></div>
+      </div>
+    </section>
+
+    <!-- Messages Section -->
+    <section id="tabMessages" class="tab-panel">
+      <div class="card">
+        <div class="card-head">
+          <h3>Messages</h3>
+          <button id="refreshMessages" class="btn ghost small">Refresh</button>
+        </div>
+        <div id="messagesList" class="table-list"><p>Loading...</p></div>
+      </div>
+    </section>
+
+    <!-- Logs Section -->
+    <section id="tabLogs" class="tab-panel">
+      <div class="card">
+        <div class="card-head">
+          <h3>System Logs</h3>
+          <button id="refreshLogs" class="btn ghost small">Refresh</button>
+        </div>
+        <div id="logsList" class="table-list"><p>Loading...</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Smart School Portal. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

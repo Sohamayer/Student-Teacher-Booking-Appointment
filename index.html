@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student–Teacher Appointment System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="logo" />
+      <h2>Smart School Portal</h2>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="intro">
+      <h1>Welcome to the Student–Teacher Appointment System</h1>
+      <p>
+        Schedule, manage, and track appointments easily between students, teachers, and administrators.
+      </p>
+    </section>
+
+    <section class="role-section">
+      <h2>Select Your Role</h2>
+      <div class="role-buttons">
+        <button class="role-btn student" onclick="window.location.href='student-login.html'">👨‍🎓 Student</button>
+        <button class="role-btn teacher" onclick="window.location.href='teacher-login.html'">👩‍🏫 Teacher</button>
+        <button class="role-btn admin" onclick="window.location.href='admin-login.html'">🏫 Admin</button>
+      </div>
+      <p class="register-text">
+        New here? <a href="#" id="registerLink">Create an account</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Smart School Portal. All rights reserved.</p>
+  </footer>
+
+  <!-- Firebase connection -->
+  <script type="module" src="firebase-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
